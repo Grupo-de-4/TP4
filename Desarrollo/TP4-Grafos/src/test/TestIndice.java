@@ -38,5 +38,4 @@ class TestIndice {
 		matriz = new MatrizSimetrica(3);
 		Assert.assertEquals(matriz.getIndice(1, 2), 2);
 	}
-
 }
