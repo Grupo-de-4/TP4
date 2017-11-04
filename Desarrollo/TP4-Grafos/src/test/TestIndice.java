@@ -1,10 +1,16 @@
 package test;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import matrizSimetrica.MatrizSimetrica;
 
+/**
+ * Tests para verificar que la creacion de la matriz simetrica funciona correctamente.
+ * Verificamos que las posiciones en el vector correspondan a la de la matriz.
+ * @author avorraim
+ *
+ */
 class TestIndice {
 
 	private MatrizSimetrica matriz;
