@@ -6,20 +6,21 @@ package matrizSimetrica;
  * @author avorraim
  */
 public class MatrizSimetrica {
-	private int orden;
-	private int size;
-	private int vector[];
+	protected int orden;
+	protected int size;
+	protected boolean vector[];
 
 	public MatrizSimetrica(int n) {
 		this.orden = n;
 		this.size = (int) ((Math.pow(orden, 2) - orden) / 2);
-		vector = new int[this.size];
+		vector = new boolean[this.size];
 	}
 
-	public int getPos(int f, int c) {
+	public boolean getPos(int f, int c) {
 		if (c == f)
-			return 0;
+			return false;
 
+		//Invierto los indices si me llegan al reves
 		if (c < f) {
 			f = f + c;
 			c = f - c;
@@ -35,7 +36,7 @@ public class MatrizSimetrica {
 		return indice;
 	}
 
-	public boolean setPos(int valor, int f, int c) {
+	public boolean setPos(boolean valor, int f, int c) {
 
 		if (f == c)
 			return false;
@@ -75,13 +76,4 @@ public class MatrizSimetrica {
 			System.out.println("");
 		}
 	}
-	
-	/*
-	 * public static void main(String[] args) { MatrizSimetrica mat = new
-	 * MatrizSimetrica(3); mat.setPos(1, 0, 1); mat.setPos(1, 0, 2); mat.setPos(1,
-	 * 1, 2); mat.setPos(2, 2, 0); mat.setPos(5, 0, 0);
-	 * System.out.println(mat.getPos(2, 0)); mat.printUpperTriangle();
-	 * System.out.println(""); mat.printMatrix(); }
-	 */
-
 }
